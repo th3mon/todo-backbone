@@ -47,4 +47,4 @@ var TodoList = Backbone.Collection.extend({
 });
 
 // Create our global collection of **Todos**.
-app.Todo = new TodoList();
+app.Todos = new TodoList();
