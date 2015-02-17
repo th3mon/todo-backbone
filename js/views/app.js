@@ -25,7 +25,7 @@ app.AppView = Backbone.View.extend({
   // collection, when items are added or changed.
   initialize: function(){
     this.allCheckbox = this.$('#toggle-all')[0];
-    this.$input = this.$('new-todo');
+    this.$input = this.$('#new-todo');
     this.$footer = this.$('#footer');
     this.$main = this.$('#main');
 
