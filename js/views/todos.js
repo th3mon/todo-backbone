@@ -33,7 +33,7 @@ app.TodoView = Backbone.View.extend({
 
   // Rerenders the titles of the todo item.
   render: function(){
-    this.$el.html(this.template(this.model.toJSON()));
+    this.$el.html( this.template( this.model.attributes ) );
 
     this.$el.toggleClass('completed', this.model.get('completed'));
     this.toggleVisible();
@@ -50,7 +50,7 @@ app.TodoView = Backbone.View.extend({
 
   // Determines if item should be hidden
   isHidden: function(){
-    var isCompleted = this.model.get('computed');
+    var isCompleted = this.model.get('completed');
 
     return (
       (!isCompleted && app.TodoFilter === 'completed') ||
